@@ -1,0 +1,21 @@
+# Xcode
+#
+# gitignore contributors: guess what! Alex Akimov and Susanne Bachfischer
+#
+build/
+DerivedData/
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archives & IPAs generated locally
+*.xcarchive
+*.ipa
+
+# Agent scratch / temporary
+.system_generated/

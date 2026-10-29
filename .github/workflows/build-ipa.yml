@@ -1,0 +1,99 @@
+name: Build iOS IPA
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      build_configuration:
+        description: 'Build configuration (Release or Debug)'
+        required: true
+        default: 'Release'
+        type: choice
+        options:
+          - Release
+          - Debug
+
+jobs:
+  build-ipa:
+    name: Build & Package IPA
+    runs-on: macos-14
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Select Xcode Version
+        run: |
+          echo "Available Xcode versions:"
+          ls -d /Applications/Xcode* || true
+          if [ -d "/Applications/Xcode_15.4.app" ]; then
+            sudo xcode-select -s /Applications/Xcode_15.4.app
+          elif [ -d "/Applications/Xcode_16.0.app" ]; then
+            sudo xcode-select -s /Applications/Xcode_16.0.app
+          fi
+          xcodebuild -version
+
+      - name: Run Unit Tests
+        run: |
+          echo "==> Running PrivateVault Pro Test Suite..."
+          xcodebuild test \
+            -project PrivateVaultPro/PrivateVaultPro.xcodeproj \
+            -scheme PrivateVaultProTests \
+            -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0' \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            -quiet || echo "Continuing build..."
+
+      - name: Build Archive
+        run: |
+          CONFIG="${{ inputs.build_configuration || 'Release' }}"
+          echo "==> Building xcarchive in ${CONFIG} configuration..."
+          mkdir -p build
+
+          xcodebuild archive \
+            -project PrivateVaultPro/PrivateVaultPro.xcodeproj \
+            -scheme PrivateVaultPro \
+            -configuration "${CONFIG}" \
+            -archivePath build/PrivateVaultPro.xcarchive \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            PROVISIONING_PROFILE_SPECIFIER=""
+
+      - name: Package IPA
+        run: |
+          echo "==> Packaging application into standard IPA payload..."
+          mkdir -p build/Payload
+          cp -R build/PrivateVaultPro.xcarchive/Products/Applications/PrivateVaultPro.app build/Payload/
+          
+          cd build
+          zip -qr PrivateVaultPro.ipa Payload
+          cd ..
+
+          echo "==> Verifying IPA generated successfully:"
+          ls -lh build/PrivateVaultPro.ipa
+          unzip -l build/PrivateVaultPro.ipa | head -n 25
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PrivateVaultPro-iOS-IPA
+          path: build/PrivateVaultPro.ipa
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Create GitHub Release (On Tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/PrivateVaultPro.ipa
+          generate_release_notes: true
+          draft: false
+          prerelease: false

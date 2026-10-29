@@ -1,0 +1,899 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1001 /* PrivateVaultProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001 /* PrivateVaultProApp.swift */; };
+		1002 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002 /* AppEnvironment.swift */; };
+		1003 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003 /* AppState.swift */; };
+		1004 /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004 /* CryptoService.swift */; };
+		1005 /* PBKDF2KeyDerivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005 /* PBKDF2KeyDerivation.swift */; };
+		1006 /* EncryptionKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006 /* EncryptionKeyManager.swift */; };
+		1007 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007 /* KeychainService.swift */; };
+		1008 /* VaultStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2008 /* VaultStorageService.swift */; };
+		1009 /* BiometricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009 /* BiometricManager.swift */; };
+		1010 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2010 /* AuthenticationService.swift */; };
+		1011 /* BackupManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011 /* BackupManifest.swift */; };
+		1012 /* BackupZipHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2012 /* BackupZipHandler.swift */; };
+		1013 /* ZipSafetyValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2013 /* ZipSafetyValidator.swift */; };
+		1014 /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2014 /* BackupService.swift */; };
+		1015 /* RestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2015 /* RestoreService.swift */; };
+		1016 /* MediaImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016 /* MediaImportService.swift */; };
+		1017 /* MediaExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017 /* MediaExportService.swift */; };
+		1018 /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2018 /* AlbumService.swift */; };
+		1019 /* ThumbnailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019 /* ThumbnailService.swift */; };
+		1020 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020 /* MediaItem.swift */; };
+		1021 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021 /* Album.swift */; };
+		1022 /* VaultMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022 /* VaultMetadata.swift */; };
+		1023 /* ActivityLogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023 /* ActivityLogEntry.swift */; };
+		1024 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2024 /* AppTheme.swift */; };
+		1025 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025 /* AppSettings.swift */; };
+		1026 /* RootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2026 /* RootContainerView.swift */; };
+		1027 /* PrivacyBlurOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027 /* PrivacyBlurOverlay.swift */; };
+		1028 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028 /* MainTabView.swift */; };
+		1029 /* VaultDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029 /* VaultDashboardView.swift */; };
+		1030 /* VaultStatusRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030 /* VaultStatusRingView.swift */; };
+		1031 /* MetricCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031 /* MetricCardView.swift */; };
+		1032 /* QuickActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032 /* QuickActionButton.swift */; };
+		1033 /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033 /* LockScreenView.swift */; };
+		1034 /* PinEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2034 /* PinEntryView.swift */; };
+		1035 /* SetupPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035 /* SetupPinView.swift */; };
+		1036 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036 /* GalleryView.swift */; };
+		1037 /* MediaGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2037 /* MediaGridView.swift */; };
+		1038 /* MediaThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2038 /* MediaThumbnailView.swift */; };
+		1039 /* MediaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2039 /* MediaDetailView.swift */; };
+		1040 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040 /* VideoPlayerView.swift */; };
+		1041 /* FilterBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041 /* FilterBarView.swift */; };
+		1042 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042 /* SearchBarView.swift */; };
+		1043 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043 /* AlbumsView.swift */; };
+		1044 /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044 /* AlbumDetailView.swift */; };
+		1045 /* CreateAlbumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045 /* CreateAlbumSheet.swift */; };
+		1046 /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046 /* BackupView.swift */; };
+		1047 /* CreateBackupSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2047 /* CreateBackupSheet.swift */; };
+		1048 /* RestorePreviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2048 /* RestorePreviewSheet.swift */; };
+		1049 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049 /* SettingsView.swift */; };
+		1050 /* SecuritySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2050 /* SecuritySettingsView.swift */; };
+		1051 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051 /* AboutView.swift */; };
+		1052 /* GlassCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052 /* GlassCard.swift */; };
+		1053 /* GlowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053 /* GlowModifier.swift */; };
+		1054 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054 /* ShareSheet.swift */; };
+		1055 /* ToastBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2055 /* ToastBannerView.swift */; };
+		1056 /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2056 /* Color+Theme.swift */; };
+		1057 /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057 /* Date+Formatting.swift */; };
+		1058 /* ByteCountFormatter+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2058 /* ByteCountFormatter+Utils.swift */; };
+		1059 /* View+Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2059 /* View+Haptics.swift */; };
+		1060 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060 /* HapticFeedback.swift */; };
+		1061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2061 /* Assets.xcassets */; };
+		
+		/* Test files */
+		3001 /* CryptoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001 /* CryptoServiceTests.swift */; };
+		3002 /* PBKDF2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4002 /* PBKDF2Tests.swift */; };
+		3003 /* VaultStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4003 /* VaultStorageTests.swift */; };
+		3004 /* MockKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4004 /* MockKeychainService.swift */; };
+		3005 /* BackupAndRestoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005 /* BackupAndRestoreTests.swift */; };
+		3006 /* ZipSafetyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4006 /* ZipSafetyTests.swift */; };
+		3007 /* CorruptedBackupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007 /* CorruptedBackupTests.swift */; };
+		3008 /* AlbumServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4008 /* AlbumServiceTests.swift */; };
+		3009 /* MediaImportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4009 /* MediaImportTests.swift */; };
+		3010 /* AuthenticationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4010 /* AuthenticationServiceTests.swift */; };
+		3011 /* PrivateVaultProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4011 /* PrivateVaultProUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6001;
+			remoteInfo = PrivateVaultPro;
+		};
+		5002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6001;
+			remoteInfo = PrivateVaultPro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6001 /* PrivateVaultPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivateVaultPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6002 /* PrivateVaultProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrivateVaultProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003 /* PrivateVaultProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrivateVaultProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		2001 /* PrivateVaultProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateVaultProApp.swift; sourceTree = "<group>"; };
+		2002 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		2003 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		2004 /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
+		2005 /* PBKDF2KeyDerivation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBKDF2KeyDerivation.swift; sourceTree = "<group>"; };
+		2006 /* EncryptionKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionKeyManager.swift; sourceTree = "<group>"; };
+		2007 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		2008 /* VaultStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultStorageService.swift; sourceTree = "<group>"; };
+		2009 /* BiometricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricManager.swift; sourceTree = "<group>"; };
+		2010 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		2011 /* BackupManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupManifest.swift; sourceTree = "<group>"; };
+		2012 /* BackupZipHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupZipHandler.swift; sourceTree = "<group>"; };
+		2013 /* ZipSafetyValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipSafetyValidator.swift; sourceTree = "<group>"; };
+		2014 /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
+		2015 /* RestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreService.swift; sourceTree = "<group>"; };
+		2016 /* MediaImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaImportService.swift; sourceTree = "<group>"; };
+		2017 /* MediaExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaExportService.swift; sourceTree = "<group>"; };
+		2018 /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		2019 /* ThumbnailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailService.swift; sourceTree = "<group>"; };
+		2020 /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
+		2021 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		2022 /* VaultMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultMetadata.swift; sourceTree = "<group>"; };
+		2023 /* ActivityLogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLogEntry.swift; sourceTree = "<group>"; };
+		2024 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		2025 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		2026 /* RootContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContainerView.swift; sourceTree = "<group>"; };
+		2027 /* PrivacyBlurOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyBlurOverlay.swift; sourceTree = "<group>"; };
+		2028 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		2029 /* VaultDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultDashboardView.swift; sourceTree = "<group>"; };
+		2030 /* VaultStatusRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultStatusRingView.swift; sourceTree = "<group>"; };
+		2031 /* MetricCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCardView.swift; sourceTree = "<group>"; };
+		2032 /* QuickActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickActionButton.swift; sourceTree = "<group>"; };
+		2033 /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
+		2034 /* PinEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEntryView.swift; sourceTree = "<group>"; };
+		2035 /* SetupPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPinView.swift; sourceTree = "<group>"; };
+		2036 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		2037 /* MediaGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridView.swift; sourceTree = "<group>"; };
+		2038 /* MediaThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaThumbnailView.swift; sourceTree = "<group>"; };
+		2039 /* MediaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailView.swift; sourceTree = "<group>"; };
+		2040 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		2041 /* FilterBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBarView.swift; sourceTree = "<group>"; };
+		2042 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		2043 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
+		2044 /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
+		2045 /* CreateAlbumSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlbumSheet.swift; sourceTree = "<group>"; };
+		2046 /* BackupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupView.swift; sourceTree = "<group>"; };
+		2047 /* CreateBackupSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBackupSheet.swift; sourceTree = "<group>"; };
+		2048 /* RestorePreviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePreviewSheet.swift; sourceTree = "<group>"; };
+		2049 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2050 /* SecuritySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuritySettingsView.swift; sourceTree = "<group>"; };
+		2051 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		2052 /* GlassCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassCard.swift; sourceTree = "<group>"; };
+		2053 /* GlowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowModifier.swift; sourceTree = "<group>"; };
+		2054 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		2055 /* ToastBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastBannerView.swift; sourceTree = "<group>"; };
+		2056 /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		2057 /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
+		2058 /* ByteCountFormatter+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ByteCountFormatter+Utils.swift"; sourceTree = "<group>"; };
+		2059 /* View+Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Haptics.swift"; sourceTree = "<group>"; };
+		2060 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		2061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2063 /* PrivateVaultPro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrivateVaultPro.entitlements; sourceTree = "<group>"; };
+
+		4001 /* CryptoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoServiceTests.swift; sourceTree = "<group>"; };
+		4002 /* PBKDF2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBKDF2Tests.swift; sourceTree = "<group>"; };
+		4003 /* VaultStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultStorageTests.swift; sourceTree = "<group>"; };
+		4004 /* MockKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeychainService.swift; sourceTree = "<group>"; };
+		4005 /* BackupAndRestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupAndRestoreTests.swift; sourceTree = "<group>"; };
+		4006 /* ZipSafetyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipSafetyTests.swift; sourceTree = "<group>"; };
+		4007 /* CorruptedBackupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorruptedBackupTests.swift; sourceTree = "<group>"; };
+		4008 /* AlbumServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumServiceTests.swift; sourceTree = "<group>"; };
+		4009 /* MediaImportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaImportTests.swift; sourceTree = "<group>"; };
+		4010 /* AuthenticationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceTests.swift; sourceTree = "<group>"; };
+		4011 /* PrivateVaultProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateVaultProUITests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0002 /* MainGroup */ = {
+			isa = PBXGroup;
+			children = (
+				8001 /* PrivateVaultPro */,
+				8002 /* PrivateVaultProTests */,
+				8003 /* PrivateVaultProUITests */,
+				8004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8001 /* PrivateVaultPro */ = {
+			isa = PBXGroup;
+			children = (
+				8010 /* App */,
+				8011 /* Core */,
+				8012 /* Models */,
+				8013 /* Views */,
+				8014 /* Utilities */,
+				8015 /* Resources */,
+			);
+			path = PrivateVaultPro;
+			sourceTree = "<group>";
+		};
+		8010 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2001 /* PrivateVaultProApp.swift */,
+				2002 /* AppEnvironment.swift */,
+				2003 /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8011 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8020 /* Crypto */,
+				8021 /* Storage */,
+				8022 /* Authentication */,
+				8023 /* Backup */,
+				8024 /* Media */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8020 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				2004 /* CryptoService.swift */,
+				2005 /* PBKDF2KeyDerivation.swift */,
+				2006 /* EncryptionKeyManager.swift */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		8021 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2007 /* KeychainService.swift */,
+				2008 /* VaultStorageService.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		8022 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				2009 /* BiometricManager.swift */,
+				2010 /* AuthenticationService.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8023 /* Backup */ = {
+			isa = PBXGroup;
+			children = (
+				2011 /* BackupManifest.swift */,
+				2012 /* BackupZipHandler.swift */,
+				2013 /* ZipSafetyValidator.swift */,
+				2014 /* BackupService.swift */,
+				2015 /* RestoreService.swift */,
+			);
+			path = Backup;
+			sourceTree = "<group>";
+		};
+		8024 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				2016 /* MediaImportService.swift */,
+				2017 /* MediaExportService.swift */,
+				2018 /* AlbumService.swift */,
+				2019 /* ThumbnailService.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		8012 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2020 /* MediaItem.swift */,
+				2021 /* Album.swift */,
+				2022 /* VaultMetadata.swift */,
+				2023 /* ActivityLogEntry.swift */,
+				2024 /* AppTheme.swift */,
+				2025 /* AppSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8013 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8030 /* Main */,
+				8031 /* Dashboard */,
+				8032 /* Authentication */,
+				8033 /* Gallery */,
+				8034 /* Albums */,
+				8035 /* Backup */,
+				8036 /* Settings */,
+				8037 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8030 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2026 /* RootContainerView.swift */,
+				2027 /* PrivacyBlurOverlay.swift */,
+				2028 /* MainTabView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8031 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				2029 /* VaultDashboardView.swift */,
+				2030 /* VaultStatusRingView.swift */,
+				2031 /* MetricCardView.swift */,
+				2032 /* QuickActionButton.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		8032 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				2033 /* LockScreenView.swift */,
+				2034 /* PinEntryView.swift */,
+				2035 /* SetupPinView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8033 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				2036 /* GalleryView.swift */,
+				2037 /* MediaGridView.swift */,
+				2038 /* MediaThumbnailView.swift */,
+				2039 /* MediaDetailView.swift */,
+				2040 /* VideoPlayerView.swift */,
+				2041 /* FilterBarView.swift */,
+				2042 /* SearchBarView.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		8034 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				2043 /* AlbumsView.swift */,
+				2044 /* AlbumDetailView.swift */,
+				2045 /* CreateAlbumSheet.swift */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		8035 /* Backup */ = {
+			isa = PBXGroup;
+			children = (
+				2046 /* BackupView.swift */,
+				2047 /* CreateBackupSheet.swift */,
+				2048 /* RestorePreviewSheet.swift */,
+			);
+			path = Backup;
+			sourceTree = "<group>";
+		};
+		8036 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2049 /* SettingsView.swift */,
+				2050 /* SecuritySettingsView.swift */,
+				2051 /* AboutView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		8037 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2052 /* GlassCard.swift */,
+				2053 /* GlowModifier.swift */,
+				2054 /* ShareSheet.swift */,
+				2055 /* ToastBannerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8014 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2056 /* Color+Theme.swift */,
+				2057 /* Date+Formatting.swift */,
+				2058 /* ByteCountFormatter+Utils.swift */,
+				2059 /* View+Haptics.swift */,
+				2060 /* HapticFeedback.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8015 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2061 /* Assets.xcassets */,
+				2062 /* Info.plist */,
+				2063 /* PrivateVaultPro.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8002 /* PrivateVaultProTests */ = {
+			isa = PBXGroup;
+			children = (
+				4001 /* CryptoServiceTests.swift */,
+				4002 /* PBKDF2Tests.swift */,
+				4003 /* VaultStorageTests.swift */,
+				4004 /* MockKeychainService.swift */,
+				4005 /* BackupAndRestoreTests.swift */,
+				4006 /* ZipSafetyTests.swift */,
+				4007 /* CorruptedBackupTests.swift */,
+				4008 /* AlbumServiceTests.swift */,
+				4009 /* MediaImportTests.swift */,
+				4010 /* AuthenticationServiceTests.swift */,
+			);
+			path = PrivateVaultProTests;
+			sourceTree = "<group>";
+		};
+		8003 /* PrivateVaultProUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4011 /* PrivateVaultProUITests.swift */,
+			);
+			path = PrivateVaultProUITests;
+			sourceTree = "<group>";
+		};
+		8004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6001 /* PrivateVaultPro.app */,
+				6002 /* PrivateVaultProTests.xctest */,
+				6003 /* PrivateVaultProUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6001 /* PrivateVaultPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9001 /* Build configuration list for PBXNativeTarget "PrivateVaultPro" */;
+			buildPhases = (
+				7001 /* Frameworks */,
+				7010 /* Sources */,
+				7011 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrivateVaultPro;
+			productName = PrivateVaultPro;
+			productReference = 6001 /* PrivateVaultPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6002 /* PrivateVaultProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9002 /* Build configuration list for PBXNativeTarget "PrivateVaultProTests" */;
+			buildPhases = (
+				7002 /* Frameworks */,
+				7020 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5001 /* PBXTargetDependency */,
+			);
+			name = PrivateVaultProTests;
+			productName = PrivateVaultProTests;
+			productReference = 6002 /* PrivateVaultProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6003 /* PrivateVaultProUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9003 /* Build configuration list for PBXNativeTarget "PrivateVaultProUITests" */;
+			buildPhases = (
+				7003 /* Frameworks */,
+				7030 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5002 /* PBXTargetDependency */,
+			);
+			name = PrivateVaultProUITests;
+			productName = PrivateVaultProUITests;
+			productReference = 6003 /* PrivateVaultProUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					6001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					6002 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 6001;
+					};
+					6003 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 6001;
+					};
+				};
+			};
+			buildConfigurationList = 9000 /* Build configuration list for PBXProject "PrivateVaultPro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0002 /* MainGroup */;
+			productRefGroup = 8004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6001 /* PrivateVaultPro */,
+				6002 /* PrivateVaultProTests */,
+				6003 /* PrivateVaultProUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7011 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1061 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1001 /* PrivateVaultProApp.swift in Sources */,
+				1002 /* AppEnvironment.swift in Sources */,
+				1003 /* AppState.swift in Sources */,
+				1004 /* CryptoService.swift in Sources */,
+				1005 /* PBKDF2KeyDerivation.swift in Sources */,
+				1006 /* EncryptionKeyManager.swift in Sources */,
+				1007 /* KeychainService.swift in Sources */,
+				1008 /* VaultStorageService.swift in Sources */,
+				1009 /* BiometricManager.swift in Sources */,
+				1010 /* AuthenticationService.swift in Sources */,
+				1011 /* BackupManifest.swift in Sources */,
+				1012 /* BackupZipHandler.swift in Sources */,
+				1013 /* ZipSafetyValidator.swift in Sources */,
+				1014 /* BackupService.swift in Sources */,
+				1015 /* RestoreService.swift in Sources */,
+				1016 /* MediaImportService.swift in Sources */,
+				1017 /* MediaExportService.swift in Sources */,
+				1018 /* AlbumService.swift in Sources */,
+				1019 /* ThumbnailService.swift in Sources */,
+				1020 /* MediaItem.swift in Sources */,
+				1021 /* Album.swift in Sources */,
+				1022 /* VaultMetadata.swift in Sources */,
+				1023 /* ActivityLogEntry.swift in Sources */,
+				1024 /* AppTheme.swift in Sources */,
+				1025 /* AppSettings.swift in Sources */,
+				1026 /* RootContainerView.swift in Sources */,
+				1027 /* PrivacyBlurOverlay.swift in Sources */,
+				1028 /* MainTabView.swift in Sources */,
+				1029 /* VaultDashboardView.swift in Sources */,
+				1030 /* VaultStatusRingView.swift in Sources */,
+				1031 /* MetricCardView.swift in Sources */,
+				1032 /* QuickActionButton.swift in Sources */,
+				1033 /* LockScreenView.swift in Sources */,
+				1034 /* PinEntryView.swift in Sources */,
+				1035 /* SetupPinView.swift in Sources */,
+				1036 /* GalleryView.swift in Sources */,
+				1037 /* MediaGridView.swift in Sources */,
+				1038 /* MediaThumbnailView.swift in Sources */,
+				1039 /* MediaDetailView.swift in Sources */,
+				1040 /* VideoPlayerView.swift in Sources */,
+				1041 /* FilterBarView.swift in Sources */,
+				1042 /* SearchBarView.swift in Sources */,
+				1043 /* AlbumsView.swift in Sources */,
+				1044 /* AlbumDetailView.swift in Sources */,
+				1045 /* CreateAlbumSheet.swift in Sources */,
+				1046 /* BackupView.swift in Sources */,
+				1047 /* CreateBackupSheet.swift in Sources */,
+				1048 /* RestorePreviewSheet.swift in Sources */,
+				1049 /* SettingsView.swift in Sources */,
+				1050 /* SecuritySettingsView.swift in Sources */,
+				1051 /* AboutView.swift in Sources */,
+				1052 /* GlassCard.swift in Sources */,
+				1053 /* GlowModifier.swift in Sources */,
+				1054 /* ShareSheet.swift in Sources */,
+				1055 /* ToastBannerView.swift in Sources */,
+				1056 /* Color+Theme.swift in Sources */,
+				1057 /* Date+Formatting.swift in Sources */,
+				1058 /* ByteCountFormatter+Utils.swift in Sources */,
+				1059 /* View+Haptics.swift in Sources */,
+				1060 /* HapticFeedback.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3001 /* CryptoServiceTests.swift in Sources */,
+				3002 /* PBKDF2Tests.swift in Sources */,
+				3003 /* VaultStorageTests.swift in Sources */,
+				3004 /* MockKeychainService.swift in Sources */,
+				3005 /* BackupAndRestoreTests.swift in Sources */,
+				3006 /* ZipSafetyTests.swift in Sources */,
+				3007 /* CorruptedBackupTests.swift in Sources */,
+				3008 /* AlbumServiceTests.swift in Sources */,
+				3009 /* MediaImportTests.swift in Sources */,
+				3010 /* AuthenticationServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7030 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3011 /* PrivateVaultProUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6001 /* PrivateVaultPro */;
+			targetProxy = 5001 /* PBXContainerItemProxy */;
+		};
+		5002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6001 /* PrivateVaultPro */;
+			targetProxy = 5002 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = PrivateVaultPro/Resources/PrivateVaultPro.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PrivateVaultPro/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.privatevaultpro.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = PrivateVaultPro/Resources/PrivateVaultPro.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PrivateVaultPro/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.privatevaultpro.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.privatevaultpro.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrivateVaultPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrivateVaultPro";
+			};
+			name = Debug;
+		};
+		9009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.privatevaultpro.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrivateVaultPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrivateVaultPro";
+			};
+			name = Release;
+		};
+		9010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.privatevaultpro.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PrivateVaultPro;
+			};
+			name = Debug;
+		};
+		9011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.privatevaultpro.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PrivateVaultPro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9000 /* Build configuration list for PBXProject "PrivateVaultPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9004 /* Debug */,
+				9005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9001 /* Build configuration list for PBXNativeTarget "PrivateVaultPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9006 /* Debug */,
+				9007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9002 /* Build configuration list for PBXNativeTarget "PrivateVaultProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9008 /* Debug */,
+				9009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9003 /* Build configuration list for PBXNativeTarget "PrivateVaultProUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9010 /* Debug */,
+				9011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0001 /* Project object */;
+}
