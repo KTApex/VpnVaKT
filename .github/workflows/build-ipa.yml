@@ -32,7 +32,7 @@ jobs:
           echo "==> Xcode version:"
           xcodebuild -version
           
-          echo "==> Listing Schemes:"
+          echo "==> Listing Project Schemes:"
           xcodebuild -list -project PrivateVaultPro/PrivateVaultPro.xcodeproj
 
       - name: Build Application Binary
