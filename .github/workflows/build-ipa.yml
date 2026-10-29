@@ -27,24 +27,44 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Inspect Xcode Environment
+        run: |
+          echo "### Xcode Environment" >> $GITHUB_STEP_SUMMARY
+          xcodebuild -version | tee -a $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          xcodebuild -project PrivateVaultPro/PrivateVaultPro.xcodeproj -list | tee -a $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
       - name: Build Application Binary
         run: |
           CONFIG="${{ inputs.build_configuration || 'Release' }}"
-          echo "==> Building PrivateVault Pro (${CONFIG})..."
+          echo "==> Compiling PrivateVault Pro (${CONFIG})..."
           
           mkdir -p build/DerivedData
 
-          xcodebuild build \
+          set -o pipefail
+          xcodebuild clean build \
             -project PrivateVaultPro/PrivateVaultPro.xcodeproj \
-            -target PrivateVaultPro \
+            -scheme PrivateVaultPro \
             -configuration "${CONFIG}" \
             -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
             -derivedDataPath build/DerivedData \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_STYLE=Manual \
             CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
             CODE_SIGN_ENTITLEMENTS="" \
-            PROVISIONING_PROFILE_SPECIFIER=""
+            PROVISIONING_PROFILE_SPECIFIER="" 2>&1 | tee xcodebuild_build.log || BUILD_STATUS=$?
+
+          if [ "${BUILD_STATUS:-0}" -ne 0 ]; then
+            echo "::error::xcodebuild compilation failed with status ${BUILD_STATUS}!"
+            echo "### Build Failure Log (Last 150 lines)" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            tail -n 150 xcodebuild_build.log >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            exit "${BUILD_STATUS}"
+          fi
 
       - name: Package IPA
         run: |
@@ -74,6 +94,14 @@ jobs:
           echo "==> Verifying final IPA:"
           ls -lh build/PrivateVaultPro.ipa
           unzip -l build/PrivateVaultPro.ipa | head -n 25
+
+      - name: Upload Build Log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-build-log
+          path: xcodebuild_build.log
+          if-no-files-found: ignore
 
       - name: Upload IPA Artifact
         uses: actions/upload-artifact@v4
