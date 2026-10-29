@@ -31,8 +31,17 @@ jobs:
         run: |
           echo "=== Xcode Version ==="
           xcodebuild -version
+
           echo "=== Xcode Projects and Schemes ==="
-          xcodebuild -project PrivateVaultPro/PrivateVaultPro.xcodeproj -list
+          xcodebuild -project PrivateVaultPro/PrivateVaultPro.xcodeproj -list > xcode_list.log 2>&1 || LIST_STATUS=$?
+          cat xcode_list.log
+          if [ "${LIST_STATUS:-0}" -ne 0 ]; then
+            echo "::error::xcodebuild -list failed with exit code ${LIST_STATUS}!"
+            tail -n 30 xcode_list.log | while IFS= read -r line; do
+              echo "::error::$line"
+            done
+            exit "${LIST_STATUS}"
+          fi
 
       - name: Build Application Binary
         run: |
