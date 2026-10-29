@@ -33,12 +33,12 @@ jobs:
           xcodebuild -version
           
           echo "==> Listing Project Schemes:"
-          xcodebuild -list -project PrivateVaultPro/PrivateVaultPro.xcodeproj || true
+          xcodebuild -list -project PrivateVaultPro/PrivateVaultPro.xcodeproj
 
       - name: Build Application Binary
         run: |
           CONFIG="${{ inputs.build_configuration || 'Release' }}"
-          echo "==> Building PrivateVault Pro (${CONFIG})..."
+          echo "==> Building PrivateVault Pro (${CONFIG}) with iphoneos SDK..."
           
           mkdir -p build/DerivedData
 
@@ -46,7 +46,7 @@ jobs:
             -project PrivateVaultPro/PrivateVaultPro.xcodeproj \
             -scheme PrivateVaultPro \
             -configuration "${CONFIG}" \
-            -destination 'generic/platform=iOS' \
+            -sdk iphoneos \
             -derivedDataPath build/DerivedData \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
