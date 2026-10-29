@@ -160,25 +160,25 @@
 		2053 /* GlowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowModifier.swift; sourceTree = "<group>"; };
 		2054 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		2055 /* ToastBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastBannerView.swift; sourceTree = "<group>"; };
-		2056 /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
-		2057 /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
-		2058 /* ByteCountFormatter+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ByteCountFormatter+Utils.swift"; sourceTree = "<group>"; };
-		2059 /* View+Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Haptics.swift"; sourceTree = "<group>"; };
+		2056 /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions/Color+Theme.swift"; sourceTree = "<group>"; };
+		2057 /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions/Date+Formatting.swift"; sourceTree = "<group>"; };
+		2058 /* ByteCountFormatter+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions/ByteCountFormatter+Utils.swift"; sourceTree = "<group>"; };
+		2059 /* View+Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions/View+Haptics.swift"; sourceTree = "<group>"; };
 		2060 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 		2061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2063 /* PrivateVaultPro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrivateVaultPro.entitlements; sourceTree = "<group>"; };
 
-		4001 /* CryptoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoServiceTests.swift; sourceTree = "<group>"; };
-		4002 /* PBKDF2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBKDF2Tests.swift; sourceTree = "<group>"; };
-		4003 /* VaultStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultStorageTests.swift; sourceTree = "<group>"; };
-		4004 /* MockKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeychainService.swift; sourceTree = "<group>"; };
-		4005 /* BackupAndRestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupAndRestoreTests.swift; sourceTree = "<group>"; };
-		4006 /* ZipSafetyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipSafetyTests.swift; sourceTree = "<group>"; };
-		4007 /* CorruptedBackupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorruptedBackupTests.swift; sourceTree = "<group>"; };
-		4008 /* AlbumServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumServiceTests.swift; sourceTree = "<group>"; };
-		4009 /* MediaImportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaImportTests.swift; sourceTree = "<group>"; };
-		4010 /* AuthenticationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceTests.swift; sourceTree = "<group>"; };
+		4001 /* CryptoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CryptoTests/CryptoServiceTests.swift"; sourceTree = "<group>"; };
+		4002 /* PBKDF2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CryptoTests/PBKDF2Tests.swift"; sourceTree = "<group>"; };
+		4003 /* VaultStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageTests/VaultStorageTests.swift"; sourceTree = "<group>"; };
+		4004 /* MockKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageTests/MockKeychainService.swift"; sourceTree = "<group>"; };
+		4005 /* BackupAndRestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackupTests/BackupAndRestoreTests.swift"; sourceTree = "<group>"; };
+		4006 /* ZipSafetyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackupTests/ZipSafetyTests.swift"; sourceTree = "<group>"; };
+		4007 /* CorruptedBackupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackupTests/CorruptedBackupTests.swift"; sourceTree = "<group>"; };
+		4008 /* AlbumServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaTests/AlbumServiceTests.swift"; sourceTree = "<group>"; };
+		4009 /* MediaImportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaTests/MediaImportTests.swift"; sourceTree = "<group>"; };
+		4010 /* AuthenticationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationTests/AuthenticationServiceTests.swift"; sourceTree = "<group>"; };
 		4011 /* PrivateVaultProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateVaultProUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
