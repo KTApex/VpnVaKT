@@ -33,7 +33,7 @@ jobs:
           xcodebuild -version
           
           echo "==> Listing Project Schemes:"
-          xcodebuild -list -project PrivateVaultPro/PrivateVaultPro.xcodeproj
+          xcodebuild -list -project PrivateVaultPro/PrivateVaultPro.xcodeproj || true
 
       - name: Build Application Binary
         run: |
@@ -67,6 +67,12 @@ jobs:
             APP_PATH=$(find build/DerivedData/Build/Products -name "PrivateVaultPro.app" | head -n 1)
           fi
           
+          if [ -z "$APP_PATH" ]; then
+            echo "ERROR: PrivateVaultPro.app not found!"
+            find build/DerivedData -name "*.app" || true
+            exit 1
+          fi
+
           echo "Found app bundle at: $APP_PATH"
           cp -R "$APP_PATH" build/Payload/
           
