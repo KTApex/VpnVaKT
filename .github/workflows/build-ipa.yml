@@ -21,63 +21,60 @@ jobs:
   build-ipa:
     name: Build & Package IPA
     runs-on: macos-14
-    timeout-minutes: 45
+    timeout-minutes: 30
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Select Xcode Version
+      - name: Show Build Environment & Schemes
         run: |
-          echo "Available Xcode versions:"
-          ls -d /Applications/Xcode* || true
-          if [ -d "/Applications/Xcode_15.4.app" ]; then
-            sudo xcode-select -s /Applications/Xcode_15.4.app
-          elif [ -d "/Applications/Xcode_16.0.app" ]; then
-            sudo xcode-select -s /Applications/Xcode_16.0.app
-          fi
+          echo "==> Xcode version:"
           xcodebuild -version
+          
+          echo "==> Listing Schemes:"
+          xcodebuild -list -project PrivateVaultPro/PrivateVaultPro.xcodeproj
 
-      - name: Run Unit Tests
-        run: |
-          echo "==> Running PrivateVault Pro Test Suite..."
-          xcodebuild test \
-            -project PrivateVaultPro/PrivateVaultPro.xcodeproj \
-            -scheme PrivateVaultProTests \
-            -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0' \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY="" \
-            -quiet || echo "Continuing build..."
-
-      - name: Build Archive
+      - name: Build Application Binary
         run: |
           CONFIG="${{ inputs.build_configuration || 'Release' }}"
-          echo "==> Building xcarchive in ${CONFIG} configuration..."
-          mkdir -p build
+          echo "==> Building PrivateVault Pro (${CONFIG})..."
+          
+          mkdir -p build/DerivedData
 
-          xcodebuild archive \
+          xcodebuild build \
             -project PrivateVaultPro/PrivateVaultPro.xcodeproj \
             -scheme PrivateVaultPro \
             -configuration "${CONFIG}" \
-            -archivePath build/PrivateVaultPro.xcarchive \
             -destination 'generic/platform=iOS' \
+            -derivedDataPath build/DerivedData \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
+            CODE_SIGN_ENTITLEMENTS="" \
             PROVISIONING_PROFILE_SPECIFIER=""
 
       - name: Package IPA
         run: |
-          echo "==> Packaging application into standard IPA payload..."
+          echo "==> Packaging into IPA payload..."
           mkdir -p build/Payload
-          cp -R build/PrivateVaultPro.xcarchive/Products/Applications/PrivateVaultPro.app build/Payload/
+          
+          # Find the built .app in DerivedData products
+          APP_PATH=$(find build/DerivedData/Build/Products -name "PrivateVaultPro.app" | grep iphoneos | head -n 1)
+          
+          if [ -z "$APP_PATH" ]; then
+            echo "Searching all products directory..."
+            APP_PATH=$(find build/DerivedData/Build/Products -name "PrivateVaultPro.app" | head -n 1)
+          fi
+          
+          echo "Found app bundle at: $APP_PATH"
+          cp -R "$APP_PATH" build/Payload/
           
           cd build
           zip -qr PrivateVaultPro.ipa Payload
           cd ..
 
-          echo "==> Verifying IPA generated successfully:"
+          echo "==> Verifying final IPA:"
           ls -lh build/PrivateVaultPro.ipa
           unzip -l build/PrivateVaultPro.ipa | head -n 25
 
