@@ -101,9 +101,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E24000000000000000006001 /* PrivateVaultPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivateVaultPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E24000000000000000006002 /* PrivateVaultProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrivateVaultProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E24000000000000000006003 /* PrivateVaultProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrivateVaultProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24000000000000000006F01 /* PrivateVaultPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivateVaultPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24000000000000000006F02 /* PrivateVaultProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrivateVaultProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24000000000000000006F03 /* PrivateVaultProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrivateVaultProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 
 		E24000000000000000002001 /* PrivateVaultProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateVaultProApp.swift; sourceTree = "<group>"; };
 		E24000000000000000002002 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
@@ -467,9 +467,9 @@
 		E24000000000000000008004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E24000000000000000006001 /* PrivateVaultPro.app */,
-				E24000000000000000006002 /* PrivateVaultProTests.xctest */,
-				E24000000000000000006003 /* PrivateVaultProUITests.xctest */,
+				E24000000000000000006F01 /* PrivateVaultPro.app */,
+				E24000000000000000006F02 /* PrivateVaultProTests.xctest */,
+				E24000000000000000006F03 /* PrivateVaultProUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -491,7 +491,7 @@
 			);
 			name = PrivateVaultPro;
 			productName = PrivateVaultPro;
-			productReference = E24000000000000000006001 /* PrivateVaultPro.app */;
+			productReference = E24000000000000000006F01 /* PrivateVaultPro.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E24000000000000000006002 /* PrivateVaultProTests */ = {
@@ -504,11 +504,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				E24000000000000000005001 /* PBXTargetDependency */,
+				E24000000000000000005D01 /* PBXTargetDependency */,
 			);
 			name = PrivateVaultProTests;
 			productName = PrivateVaultProTests;
-			productReference = E24000000000000000006002 /* PrivateVaultProTests.xctest */;
+			productReference = E24000000000000000006F02 /* PrivateVaultProTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		E24000000000000000006003 /* PrivateVaultProUITests */ = {
@@ -521,11 +521,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				E24000000000000000005002 /* PBXTargetDependency */,
+				E24000000000000000005D02 /* PBXTargetDependency */,
 			);
 			name = PrivateVaultProUITests;
 			productName = PrivateVaultProUITests;
-			productReference = E24000000000000000006003 /* PrivateVaultProUITests.xctest */;
+			productReference = E24000000000000000006F03 /* PrivateVaultProUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -678,12 +678,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E24000000000000000005001 /* PBXTargetDependency */ = {
+		E24000000000000000005D01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E24000000000000000006001 /* PrivateVaultPro */;
 			targetProxy = E24000000000000000005001 /* PBXContainerItemProxy */;
 		};
-		E24000000000000000005002 /* PBXTargetDependency */ = {
+		E24000000000000000005D02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E24000000000000000006001 /* PrivateVaultPro */;
 			targetProxy = E24000000000000000005002 /* PBXContainerItemProxy */;
